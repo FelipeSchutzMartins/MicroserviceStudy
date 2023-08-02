@@ -2,6 +2,8 @@ package br.com.erudio.controller;
 
 import br.com.erudio.model.Cambio;
 import br.com.erudio.repository.CambioRepository;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.ws.rs.core.Context;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +25,7 @@ public class CambioController {
 
     @GetMapping(value = "/{amount}/{from}/{to}")
     public Cambio getCambio(
+            @Context HttpServletRequest request,
             @PathVariable("amount") BigDecimal amount,
             @PathVariable("from") String from,
             @PathVariable("to") String to

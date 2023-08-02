@@ -1,6 +1,5 @@
 package br.com.erudio.controller;
 
-import br.com.erudio.cambio.Cambio;
 import br.com.erudio.model.Book;
 import br.com.erudio.proxy.CambioProxy;
 import br.com.erudio.repository.BookRepository;
@@ -10,10 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/book")
